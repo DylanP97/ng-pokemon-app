@@ -1,38 +1,10 @@
-<h1 class="center">Liste de Pokémons</h1>
-<p>
-  Pokémon is a Japanese media franchise managed by The Pokémon Company, founded
-  by Nintendo, Game Freak, and Creatures. The franchise was created by Satoshi
-  Tajiri in 1996, and is centered around fictional creatures called "Pokémon".
-</p>
+<nav>
 
-<div class="container">
-  <div class="row">
-    <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
-      <div
-        class="card horizontal"
-        (click)="selectPokemon(pokemon.id)"
-        pkmnBorderCard="red"
-      >
-        <div class="card-image">
-          <img [src]="pokemon.picture" />
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <p>
-              <strong>{{ pokemon.name }}</strong>
-            </p>
-            <p>
-              <small>{{ pokemon.created | date : "dd/mm/yyyy" }}</small>
-            </p>
-            <span
-              *ngFor="let type of pokemon.types"
-              class="{{ type | pokemonTypeColor }}"
-            >
-              {{ type }}
-            </span>
-          </div>
-        </div>
-      </div>
+    <div class="nav-wrapper red darken-2">
+        <a href="#" class="brand-logo center">
+            Pokémon index app - Tutoriel Angular
+        </a>
     </div>
-  </div>
-</div>
+</nav>
+
+<router-outlet></router-outlet>

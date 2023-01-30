@@ -43,6 +43,9 @@ export class PokemonTypeColorPipe implements PipeTransform {
       case 'Combat':
         color = 'deep-orange';
         break;
+      case 'Acier':
+        color = 'grey lighten-1';
+        break;
       default:
         color = 'grey';
         break;
